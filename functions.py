@@ -101,8 +101,8 @@ def text_glow(text, font, text_color, outline_color, screen, pos):
     outline = font.render(text, True, outline_color)
     x,y = pos
 
-    for dx in [-3, 0, 3]:
-        for dy in [-3, 0, 3]:
+    for dx in range(-8, 8):
+        for dy in range(-8, 0):
             screen.blit(outline, (x + dx, y + dy))
     screen.blit(base, (x, y))
 
@@ -121,6 +121,45 @@ def reset_score() -> None:
         ["", "", ""],
         ["", "", ""]
     ]
+
+
+music_on = True
+sound_on = True
+
+def music_loop(music_file):
+    pygame.mixer.music.load(music_file)
+    pygame.mixer.music.set_volume(0.1)
+    pygame.mixer.music.play(-1) #zapętlone
+
+
+def toggle_music():
+    global music_on
+    music_on = not music_on
+    if music_on:
+        pygame.mixer.music.unpause()
+    else:
+        pygame.mixer.music.pause()
+
+def is_music_on():
+    return music_on
+
+
+def click_sound_load(sound_file):
+    global click_sound
+    click_sound = pygame.mixer.Sound(sound_file)
+    click_sound.set_volume(0.5)
+
+def toggle_sound():
+    global sound_on
+    sound_on = not sound_on
+
+
+def play_click_sound():
+    if sound_on:
+        click_sound.play()
+
+def is_sound_on():
+    return sound_on
 
 
 
