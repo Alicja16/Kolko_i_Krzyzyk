@@ -84,6 +84,8 @@ while game_status:
 
     
         elif state == "play":
+            functions.whos_turn(current_player, screen_surface)
+
             music_path = r"gallery\music_on.png" if functions.is_music_on() else r"gallery\music_off.png"
             music_button = functions.load_button(music_path, (SCREEN_WIDTH - 40, 30), 50, 50)
             functions.print_image(music_button, screen_surface)

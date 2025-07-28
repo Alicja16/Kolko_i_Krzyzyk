@@ -11,6 +11,15 @@ scoreboard = [
     ["", "", ""]
 ]
 
+def whos_turn(cureent_player, screen):
+    if cureent_player == 'x':
+        path = r"gallery\current_player_x.png"
+    else:
+        path = r"gallery\current_player_o.png"
+    
+    img = load_image(path, (100, 30), 240, 52)
+    print_image(img, screen)
+
 
 def change_player(current_player: str):
     if current_player == 'x':
@@ -29,7 +38,6 @@ def rect_board_making(M_W: int, M_H: int, C_W: int, C_H: int) -> list:
             row_list.append(rect)
         rect_board.append(row_list)
     return rect_board
-
 
 
 def centers_board_making(M_W: int, M_H: int, C_W: int, C_H: int) -> list:
@@ -119,6 +127,7 @@ def load_button(image_path: str, position: list, width: int, height: int) -> lis
     rect = surface.get_rect(center = position)
     return [image, surface, rect]
 
+
 def reset_score() -> None:
     global scoreboard
     scoreboard = [
@@ -135,7 +144,6 @@ def music_loop(music_file):
     pygame.mixer.music.load(music_file)
     pygame.mixer.music.set_volume(0.1)
     pygame.mixer.music.play(-1) #zapętlone
-
 
 def toggle_music():
     global music_on
@@ -157,7 +165,6 @@ def click_sound_load(sound_file):
 def toggle_sound():
     global sound_on
     sound_on = not sound_on
-
 
 def play_click_sound():
     if sound_on:
