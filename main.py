@@ -49,8 +49,8 @@ while game_status:
             start_text = "Kółko i Krzyżyk"
             font = pygame.font.SysFont('comicsansms', 86, bold=True)
             text_width, text_height = font.size(start_text)
-            pos = ((SCREEN_WIDTH // 2 - text_width // 2), (SCREEN_HEIGHT // 2 - text_height // 2) * (4/5))
-            functions.text_glow(start_text, font, (255, 255, 255), (204, 153, 255), screen_surface, pos)
+            center = (SCREEN_WIDTH // 2, int(SCREEN_HEIGHT * 0.4))
+            functions.text_glow(start_text, font, (255, 255, 255), (204, 153, 255), screen_surface, center)
 
             start_button = functions.load_button(r"gallery\start_button.png", (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 * (3/2)), 200, 100)
             functions.print_image(start_button, screen_surface)
@@ -130,8 +130,8 @@ while game_status:
 
             font = pygame.font.SysFont('comicsansms', 72, bold=True)
             text_width, text_height = font.size(text)
-            pos = ((SCREEN_WIDTH // 2 - text_width // 2), (SCREEN_HEIGHT // 2 - text_height // 2) * (2/3))
-            functions.text_glow(text, font, (255, 255, 255), (204, 153, 255), screen_surface, pos)
+            center = (SCREEN_WIDTH // 2, int(SCREEN_HEIGHT * 0.3))
+            functions.text_glow(text, font, (255, 255, 255), (204, 153, 255), screen_surface, center)
 
             restart_button = functions.load_button(r"gallery\restart_button.png", (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 10), 200, 60)
             functions.print_image(restart_button, screen_surface)

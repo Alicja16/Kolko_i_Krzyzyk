@@ -96,15 +96,20 @@ def winning(current_player: str) -> bool:
     return False
 
 
-def text_glow(text, font, text_color, outline_color, screen, pos):
+def text_glow(text, font, text_color, outline_color, screen, center):
     base = font.render(text, True, text_color)
     outline = font.render(text, True, outline_color)
-    x,y = pos
+    text_width, text_height = base.get_size()
+    temp_surface = pygame.Surface((text_width + 2 * 12, text_height + 2 * 12), pygame.SRCALPHA)
 
-    for dx in range(-8, 8):
-        for dy in range(-8, 0):
-            screen.blit(outline, (x + dx, y + dy))
-    screen.blit(base, (x, y))
+    for dx in range(-8, 9):
+        for dy in range(-8, 9):
+            temp_surface.blit(outline, (12 + dx, 12 + dy))
+
+    temp_surface.blit(base, (12, 12))
+
+    surface_rect = temp_surface.get_rect(center=center)
+    screen.blit(temp_surface, surface_rect)
 
 
 def load_button(image_path: str, position: list, width: int, height: int) -> list:
