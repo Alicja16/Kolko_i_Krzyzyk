@@ -173,4 +173,5 @@ while game_status:
     pass
 
 pygame.quit()
-quit()
+import sys
+sys.exit()
