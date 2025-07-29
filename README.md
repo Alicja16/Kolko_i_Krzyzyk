@@ -1,7 +1,7 @@
-# 🎮 Kółko i Krzyżyk (Tic Tac Toe) – Python Game Project
+# 🎮 Tic Tac Toe (Kółko i Krzyżyk) – Python Game Project
 
-Interaktywna gra **Kółko i Krzyżyk** stworzona w Pythonie z wykorzystaniem biblioteki **Pygame**.  
-Projekt ten stanowi część mojego portfolio Python Developera i został zaprojektowany w sposób modularny, z dużym naciskiem na jakość kodu, interaktywność oraz obsługę zasobów multimedialnych (grafika, dźwięk, interfejs użytkownika).
+An interactive Tic Tac Toe game developed in Python using the Pygame library.
+This project is part of my portfolio and was built with a strong focus on code quality, modular design, user interaction, and multimedia handling (graphics, sound, and UI).
 
 ---
 
@@ -12,38 +12,37 @@ Projekt ten stanowi część mojego portfolio Python Developera i został zaproj
 
 ---
 
-## 🔽 Pobierz grę (.exe)
+## 🔽 Download the game (.exe)
 
-Nie potrzebujesz Pythona – po prostu pobierz i zagraj!
+No need to install Python – just download and play!
 
-👉 **[Pobierz wersję Windows (.exe)](https://github.com/Alicja16/Kolko_i_Krzyzyk/releases/latest)**
+👉 **[Download Windows version (.exe)](https://github.com/Alicja16/Kolko_i_Krzyzyk/releases/latest)**
 
 ---
 
-## ⚙️ Technologie i podejścia
+## ⚙️ Technologies & Design Approach
 
-| Element                | Rozwiązanie                                         |
+| Element                | 	Implementation                                         |
 |------------------------|-----------------------------------------------------|
-| Język                  | Python 3                                            |
-| Biblioteka graficzna   | Pygame                                              |
+| Language               | Python 3                                            |
+| Graphics Library       | Pygame                                              |
 | Build `.exe`           | PyInstaller (`main.spec`)                           |
-| Modularność            | Kod podzielony na `main.py` i `functions.py`        |
-| Obsługa multimediów    | Foldery `gallery/` i `sounds/`                      |
-| Obsługa dźwięku        | Muzyka + efekty kliknięcia z możliwością wyciszenia |
-| Wątki                  | Użyto `threading.Thread` do odtwarzania muzyki      |
+| Modularity             | Separated into `main.py` and `functions.py`         |
+| Media Management       | Organized into `gallery/` and `sounds/` folders     |
+| Sound Handling         | Background music + click effects with mute option   |
+| Threading              | `threading.Thread` used for music playback          |
 
-🧪 **Eksperymentalnie** zastosowałam również bibliotekę `threading`, mimo że Pygame domyślnie zarządza odtwarzaniem dźwięku osobno.  
-Chciałam przetestować i zaprezentować możliwość kontroli nad własnym wątkiem do obsługi muzyki — jako ćwiczenie koncepcyjne i programistyczne.
+🧪 **As an experimental feature**, I incorporated Python’s `threading` library—despite Pygame’s built-in sound system—to demonstrate and test custom thread-based audio control. This was both a conceptual and technical exercise to expand my understanding of multithreading in Python.
 
 ---
 
-## 🧠 Funkcje gry
+## 🧠 Game Features
 
-- 🖼️ Ekran startowy z animowanym tytułem i przyciskiem „Start”
-- 🔊 Przełączniki muzyki i efektów dźwiękowych (on/off)
-- ❎ Losowanie pierwszego gracza (X lub O)
-- 🧩 Detekcja zwycięstwa i remisu
-- 🔁 Restart gry lub powrót do menu
-- 🎵 Tło muzyczne oraz dźwięki kliknięć
-- 🎨 Efekt "glow" (świecenia) tekstu przy pomocy `pygame.Surface`
-- 🖱️ Reakcja na kliknięcia, skalowanie grafiki, rysowanie planszy
+- 🖼️ Animated start screen with a "Start" button
+- 🔊 Toggle buttons for music and sound effects (on/off)
+- ❎ Random player selection (X or O)
+- 🧩 Win and draw detection logic
+- 🔁 Option to restart the game or return to main menu
+- 🎵 Background music and interactive sound effects
+- 🎨 "Glow" text effect using `pygame.Surface`
+- 🖱️ Full mouse interaction: click detection, graphics scaling, and board rendering
