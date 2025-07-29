@@ -5,7 +5,7 @@ This project is part of my portfolio and was built with a strong focus on code q
 
 ---
 
-## 🖼️ Zrzut ekranu
+## 🖼️ Screenshot
 
 <img width="994" height="783" alt="image" src="https://github.com/user-attachments/assets/63c165c4-a5f2-4dda-abf0-3eb838e06e60" />
 
